@@ -1,0 +1,20 @@
+.container {
+	display: grid;
+	justify-items: center;
+}
+
+.titul {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.news {
+    width: 65%;
+    background-color: papayawhip;
+    display: grid;
+    grid-template-columns: 10fr 3fr;
+    grid-template-rows: 60px 30px;
+    border: 1px solid black;
+}
