@@ -11,10 +11,31 @@
 }
 
 .news {
-    width: 65%;
     background-color: papayawhip;
     display: grid;
     grid-template-columns: 10fr 3fr;
-    grid-template-rows: 60px 30px;
     border: 1px solid black;
+    padding: 5px;
+}
+
+.newsContainer {
+    display: grid;
+    gap: 5px;
+}
+
+.newsTitul {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.score {
+    align-self: center;
+}
+
+.author {
+
+}
+
+.date {
+
 }
