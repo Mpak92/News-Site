@@ -10,7 +10,7 @@ const MainPage = () => {
 
     const dispatch = useDispatch();
 
-    let { data, error, loading, fetchNow } = useFetch(`https://hacker-news.firebaseio.com/v0/newstories.json`);
+    let { data, error, loading } = useFetch(`https://hacker-news.firebaseio.com/v0/newstories.json`);
 
     useEffect(() => {
         if (data) dispatch(setNewsId(data.slice(0, 100)));

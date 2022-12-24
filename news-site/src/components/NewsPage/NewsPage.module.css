@@ -1,0 +1,41 @@
+.container {
+	display: grid;
+	justify-items: center;
+}
+
+.titul {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.commentContainer {
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+}
+
+.comment {
+    width: 70%;
+    background-color: papayawhip;
+    display: grid;
+    row-gap: 7px;
+    grid-template-areas: 'a a' 'b c';
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.text {
+    grid-area: a;
+}
+
+.by {
+    font-weight: bold;
+    grid-area: b;
+}
+
+.time {
+    justify-self: end;
+    grid-area: c;
+}

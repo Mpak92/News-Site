@@ -11,7 +11,7 @@ const Timeline = (props) => {
 
     const dispatch = useDispatch();
 
-    let { data, error, loading, fetchNow } = useFetch(`https://hacker-news.firebaseio.com/v0/item/${props.id}.json`);
+    let { data, error, loading } = useFetch(`https://hacker-news.firebaseio.com/v0/item/${props.id}.json`);
 
     useEffect(() => {
         if (data) dispatch(addNews(data));
