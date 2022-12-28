@@ -1,9 +1,10 @@
 import styles from './MainPage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import Timeline from './NewsTimelIne';
+import NewsTimeline from './NewsTimelIne';
 import useFetch from './../customHooks/useFetch';
 import { setNewsId } from './../../redux/mainPageReducer';
+import Preloader from '../common/Preloader';
 
 const MainPage = () => {
     const main = useSelector(state => state.main);
@@ -17,8 +18,9 @@ const MainPage = () => {
     }, [data])
 
     if (error) console.log(error);
+    if (loading) return <Preloader />;
 
-    const newsTimeline = main.lastNewsId.map((id, index)=> <Timeline id={id} index={index} key={id} />);
+    const newsTimeline = main.lastNewsId.map((id) => <NewsTimeline id={id} />);
 
     return (
         <div className={styles.container}>

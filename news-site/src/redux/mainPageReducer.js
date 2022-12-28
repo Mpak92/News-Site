@@ -1,8 +1,6 @@
 const SET_NEWS_ID = 'SET_NEWS_ID';
-const ADD_NEWS = 'ADD_NEWS';
 
 const initialState = {
-    latestNews: [],
     lastNewsId: []
 };
 
@@ -14,12 +12,6 @@ const mainPageReducer = (state = initialState, action) => {
                 lastNewsId: action.data,
             };
 
-        case ADD_NEWS:
-            return {
-                ...state,
-                latestNews: [...state.latestNews, action.news],
-            };
-
         default:
             return state;
     }
@@ -27,9 +19,6 @@ const mainPageReducer = (state = initialState, action) => {
 
 export const setNewsId = (data) => {
     return { type: SET_NEWS_ID, data };
-};
-export const addNews = (news) => {
-    return { type: ADD_NEWS, news };
 };
 
 export default mainPageReducer;

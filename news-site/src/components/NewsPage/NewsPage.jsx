@@ -2,10 +2,12 @@ import styles from './NewsPage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import useFetch from './../customHooks/useFetch';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { setNewsData } from './../../redux/newsPageREducer';
 import moment from 'moment';
 import NewsComments from './NewsComments';
+import Preloader from '../common/Preloader';
+import home from './../../assets/Home.png';
 
 const NewsPage = () => {
     const news = useSelector(state => state.news);
@@ -21,12 +23,22 @@ const NewsPage = () => {
     }, [data])
 
     if (error) console.log(error);
+    if (loading) return <Preloader />;
 
-    const newsComment = news.newsData?.kids?.map((id, index)=> <NewsComments id={id} index={index} key={id} />);
+    const newsCommentsId = news.newsData.kids?.concat();
+    const newsComment = newsCommentsId?.sort((a, b) => a - b).map((id) => <NewsComments id={id} />);
 
     return (
         <div className={styles.container}>
-            <div className={styles.titul}>{news.newsData?.title}</div>
+            <div className={styles.head}>
+                <div className={styles.titul}>{news.newsData?.title}</div>
+                <div className={styles.buttonToMain}>
+                    <div>Back to Main</div>
+                    <Link to='/'>
+                        <img src={home} alt="BackToMain" />
+                    </Link>
+                </div>
+            </div>
             <div>
                 <div>Link: <a href={news.newsData?.url} target="_blank" rel='noreferrer'>{news.newsData?.url}</a></div>
                 <div>Publication date: {moment.unix(news.newsData?.time).format('DD.MM.YYYY HH:mm')}</div>

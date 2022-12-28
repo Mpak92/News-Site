@@ -3,11 +3,30 @@
 	justify-items: center;
 }
 
+.head {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 200px;
+}
+
 .titul {
 	margin-top: 50px;
 	margin-bottom: 50px;
+    padding-left: 200px;
 	font-size: 40px;
 	font-weight: bold;
+}
+
+.buttonToMain {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttonToMain img {
+    width: 130px;
+    height: 130px;
 }
 
 .commentContainer {
