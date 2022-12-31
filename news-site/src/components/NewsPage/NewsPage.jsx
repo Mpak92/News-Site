@@ -16,17 +16,24 @@ const NewsPage = () => {
 
     const { newsId } = useParams();
 
-    let { data, error, loading } = useFetch(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`);
+    let { data, error, loading, fetchNow } = useFetch(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`);
 
     useEffect(() => {
         if (data) dispatch(setNewsData(data));
     }, [data])
 
+    useEffect(() => {
+        const refresh = setInterval(() => fetchNow(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`), 60000);
+        return () => {
+            clearInterval(refresh);
+        }
+    }, [])
+
     if (error) console.log(error);
     if (loading) return <Preloader />;
 
     const newsCommentsId = news.newsData.kids?.concat();
-    const newsComment = newsCommentsId?.sort((a, b) => a - b).map((id) => <NewsComments id={id} />);
+    const newsComment = newsCommentsId?.sort((a, b) => a - b).map((id) => <NewsComments id={id} key={id} />);
 
     return (
         <div className={styles.container}>
@@ -46,6 +53,7 @@ const NewsPage = () => {
                 <div>Number of comments: {news.newsData?.descendants}</div>
             </div>
             <div className={styles.commentContainer}>Comments
+            <div className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`)}>Update comment tree</div>
                 {newsComment}
             </div>
         </div>
