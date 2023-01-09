@@ -31,9 +31,17 @@
 
 .commentContainer {
     display: grid;
-    justify-items: center;
-    gap: 5px;
     margin-top: 10px;
+    width: 60%;
+}
+
+.commentsTitul {
+    justify-self: center;
+}
+
+.commentBox {
+    display: grid;
+    gap: 10px;
 }
 
 .refreshButton {
@@ -45,23 +53,56 @@
     background-color: rgb(184, 208, 227);
     cursor: pointer;
     user-select: none;
+    justify-self: center;
 }
 
-.comment {
-    width: 70%;
+.commentRoot {
+    width: 100%;
     background-color: papayawhip;
     display: grid;
     row-gap: 7px;
     grid-template-areas: 'a a' 'b c';
     border: 1px solid black;
     padding: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.comment {
+    width: 100%;
+    background-color: papayawhip;
+    display: grid;
+    row-gap: 7px;
+    grid-template-areas: 'a a' 'b c';
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 3px;
+}
+
+.active {
+    width: 100%;
+    background-color: rgb(242, 205, 145);
+    display: grid;
+    row-gap: 7px;
+    grid-template-areas: 'a a' 'b c';
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.kidsContainer {
+    display: grid;
+    margin-left: 50px;
 }
 
 .text {
+    justify-self: start;
     grid-area: a;
 }
 
 .by {
+    justify-self: start;
     font-weight: bold;
     grid-area: b;
 }

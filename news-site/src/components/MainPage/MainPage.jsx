@@ -15,7 +15,7 @@ const MainPage = () => {
 
     useEffect(() => {
         if (data) dispatch(setNewsId(data.slice(0, 100)));
-    }, [data])
+    }, [data, dispatch])
 
     useEffect(() => {
         const refresh = setInterval(() => fetchNow(`https://hacker-news.firebaseio.com/v0/newstories.json`), 60000);

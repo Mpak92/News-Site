@@ -1,6 +1,6 @@
 import { combineReducers, createStore } from 'redux';
 import mainPageReducer from './mainPageReducer';
-import newsPageReducer from './newsPageREducer';
+import newsPageReducer from './newsPageReducer';
 
 const reducers = combineReducers({
     main: mainPageReducer,

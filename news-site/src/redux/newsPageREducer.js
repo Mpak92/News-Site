@@ -1,9 +1,10 @@
 const SET_NEWS_DATA = 'SET_NEWS_DATA';
-const ADD_NEWS_COMMENT = 'ADD_NEWS_COMMENT';
+const ADD_ROOT_COMMENTS = 'ADD_ROOT_COMMENTS';
+const SHOW_NESTED_COMMENTS = 'SHOW_NESTED_COMMENTS';
 
 const initialState = {
     newsData: {},
-    comments: []
+    rootComments: {}
 };
 
 const newsPageReducer = (state = initialState, action) => {
@@ -14,10 +15,24 @@ const newsPageReducer = (state = initialState, action) => {
                 newsData: action.data
             };
 
-        case ADD_NEWS_COMMENT:
+        case ADD_ROOT_COMMENTS:
+            const listOfRootId = action.rootId.reduce((target, key) => {
+                target[key] = false;
+                return target;
+            }, {})
+
             return {
                 ...state,
-                comments: [...state.comments, action.comment]
+                rootComments: listOfRootId
+            };
+
+        case SHOW_NESTED_COMMENTS:
+            return {
+                ...state,
+                rootComments: {
+                    ...state.rootComments,
+                    [action.id]: !state.rootComments[action.id]
+                }
             };
 
         default:
@@ -28,8 +43,11 @@ const newsPageReducer = (state = initialState, action) => {
 export const setNewsData = (data) => {
     return { type: SET_NEWS_DATA, data };
 };
-export const addNewsComment = (comment) => {
-    return { type: ADD_NEWS_COMMENT, comment };
+export const addRootComments = (rootId) => {
+    return { type: ADD_ROOT_COMMENTS, rootId };
+};
+export const showNestedComments = (id) => {
+    return { type: SHOW_NESTED_COMMENTS, id };
 };
 
 export default newsPageReducer;

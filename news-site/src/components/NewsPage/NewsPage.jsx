@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import useFetch from './../customHooks/useFetch';
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { setNewsData } from './../../redux/newsPageREducer';
+import { addRootComments, setNewsData } from './../../redux/newsPageReducer';
 import moment from 'moment';
 import NewsComments from './NewsComments';
 import Preloader from '../common/Preloader';
@@ -19,8 +19,11 @@ const NewsPage = () => {
     let { data, error, loading, fetchNow } = useFetch(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`);
 
     useEffect(() => {
-        if (data) dispatch(setNewsData(data));
-    }, [data])
+        if (data) {
+            dispatch(setNewsData(data));
+            dispatch(addRootComments(data.kids));
+        };
+    }, [data, dispatch])
 
     useEffect(() => {
         const refresh = setInterval(() => fetchNow(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`), 60000);
@@ -52,9 +55,10 @@ const NewsPage = () => {
                 <div>Author: {news.newsData?.by}</div>
                 <div>Number of comments: {news.newsData?.descendants}</div>
             </div>
-            <div className={styles.commentContainer}>Comments
-            <div className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`)}>Update comment tree</div>
-                {newsComment}
+            <div className={styles.commentContainer}>
+                <div className={styles.commentsTitul}>Comments</div>
+                <div className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`)}>Update comment tree</div>
+                <div className={styles.commentBox}>{newsComment}</div>
             </div>
         </div>
     )
