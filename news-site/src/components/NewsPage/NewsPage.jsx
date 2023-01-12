@@ -21,8 +21,10 @@ const NewsPage = () => {
     useEffect(() => {
         if (data) {
             dispatch(setNewsData(data));
-            dispatch(addRootComments(data.kids));
         };
+        if (data?.kids) {
+            dispatch(addRootComments(data.kids));
+        }
     }, [data, dispatch])
 
     useEffect(() => {
