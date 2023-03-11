@@ -1,113 +1,115 @@
 .container {
-	display: grid;
-	justify-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 .head {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 200px;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 200px;
 }
 
 .titul {
-	margin-top: 50px;
-	margin-bottom: 50px;
-    padding-left: 200px;
-	font-size: 40px;
-	font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 200px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .buttonToMain {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .buttonToMain img {
-    width: 130px;
-    height: 130px;
+  width: 130px;
+  height: 130px;
 }
 
 .commentContainer {
-    display: grid;
-    margin-top: 10px;
-    width: 60%;
+  display: grid;
+  margin-top: 10px;
+  width: 60%;
 }
 
 .commentsTitul {
-    justify-self: center;
+  justify-self: center;
 }
 
 .commentBox {
-    display: grid;
-    gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .refreshButton {
-    border: 1px solid black;
-    padding: 10px 20px 10px 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: large;
-    background-color: rgb(184, 208, 227);
-    cursor: pointer;
-    user-select: none;
-    justify-self: center;
+  border: 1px solid black;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: large;
+  background-color: rgb(184, 208, 227);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  justify-self: center;
 }
 
 .commentRoot {
-    width: 100%;
-    background-color: papayawhip;
-    display: grid;
-    row-gap: 7px;
-    grid-template-areas: 'a a' 'b c';
-    border: 1px solid black;
-    padding: 5px;
-    margin-bottom: 3px;
-    cursor: pointer;
+  width: 100%;
+  background-color: papayawhip;
+  display: grid;
+  row-gap: 7px;
+  grid-template-areas: "a a" "b c";
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 3px;
+  cursor: pointer;
 }
 
 .comment {
-    width: 100%;
-    background-color: papayawhip;
-    display: grid;
-    row-gap: 7px;
-    grid-template-areas: 'a a' 'b c';
-    border: 1px solid black;
-    padding: 5px;
-    margin-bottom: 3px;
+  width: 100%;
+  background-color: papayawhip;
+  display: grid;
+  row-gap: 7px;
+  grid-template-areas: "a a" "b c";
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 3px;
 }
 
 .active {
-    width: 100%;
-    background-color: rgb(242, 205, 145);
-    display: grid;
-    row-gap: 7px;
-    grid-template-areas: 'a a' 'b c';
-    border: 1px solid black;
-    padding: 5px;
-    margin-bottom: 3px;
-    cursor: pointer;
+  width: 100%;
+  background-color: rgb(242, 205, 145);
+  display: grid;
+  row-gap: 7px;
+  grid-template-areas: "a a" "b c";
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 3px;
+  cursor: pointer;
 }
 
 .kidsContainer {
-    display: grid;
-    margin-left: 50px;
+  display: grid;
+  margin-left: 50px;
 }
 
 .text {
-    justify-self: start;
-    grid-area: a;
+  justify-self: start;
+  grid-area: a;
 }
 
 .by {
-    justify-self: start;
-    font-weight: bold;
-    grid-area: b;
+  justify-self: start;
+  font-weight: bold;
+  grid-area: b;
 }
 
 .time {
-    justify-self: end;
-    grid-area: c;
+  justify-self: end;
+  grid-area: c;
 }
