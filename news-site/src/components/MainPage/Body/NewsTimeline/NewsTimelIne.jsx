@@ -1,5 +1,5 @@
-import useFetch from './../customHooks/useFetch';
-import styles from './MainPage.module.css';
+import useFetch from '../../../customHooks/useFetch';
+import styles from './NewsTimeline.module.css';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 

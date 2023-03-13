@@ -1,0 +1,12 @@
+.titul {
+  margin: 0 0 10px 0;
+  text-align: center;
+  background-color: #222324;
+}
+.titul p {
+  margin: 0;
+  font-family: BeauRivage;
+  font-size: 120px;
+  font-weight: bold;
+  color: white;
+}

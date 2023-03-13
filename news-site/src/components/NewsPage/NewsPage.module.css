@@ -1,3 +1,14 @@
+.active, .comment, .commentRoot {
+  width: 100%;
+  background-color: papayawhip;
+  display: grid;
+  row-gap: 7px;
+  grid-template-areas: "a a" "b c";
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 3px;
+}
+
 .container {
   display: grid;
   justify-items: center;
@@ -23,7 +34,6 @@
   font-weight: bold;
   text-align: center;
 }
-
 .buttonToMain img {
   width: 130px;
   height: 130px;
@@ -59,37 +69,11 @@
 }
 
 .commentRoot {
-  width: 100%;
-  background-color: papayawhip;
-  display: grid;
-  row-gap: 7px;
-  grid-template-areas: "a a" "b c";
-  border: 1px solid black;
-  padding: 5px;
-  margin-bottom: 3px;
   cursor: pointer;
 }
 
-.comment {
-  width: 100%;
-  background-color: papayawhip;
-  display: grid;
-  row-gap: 7px;
-  grid-template-areas: "a a" "b c";
-  border: 1px solid black;
-  padding: 5px;
-  margin-bottom: 3px;
-}
-
 .active {
-  width: 100%;
   background-color: rgb(242, 205, 145);
-  display: grid;
-  row-gap: 7px;
-  grid-template-areas: "a a" "b c";
-  border: 1px solid black;
-  padding: 5px;
-  margin-bottom: 3px;
   cursor: pointer;
 }
 

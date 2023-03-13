@@ -1,0 +1,25 @@
+.news {
+  background-color: papayawhip;
+  display: grid;
+  grid-template-columns: 10fr 3fr;
+  border: 1px solid black;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.news:link {
+  color: black;
+}
+
+.news:visited {
+  color: black;
+}
+
+.newsTitul {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.score {
+  align-self: center;
+}
