@@ -25,16 +25,15 @@ const MainPageBody = () => {
     }, [])
 
     if (error) console.log(error);
-    if (loading) return <Preloader />;
 
     const newsTimeline = main.lastNewsId.map((id) => <NewsTimeline id={id} key={id} />);
 
     return (
         <div className={styles.container}>
-            <div className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/newstories.json`)}>Update the list</div>
-            <div className={styles.newsContainer}>
+            <div className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/newstories.json`)}>Refresh</div>
+            {loading ? <Preloader /> : <div className={styles.newsContainer}>
                 {newsTimeline}
-            </div>
+            </div>}
         </div>
     )
 }

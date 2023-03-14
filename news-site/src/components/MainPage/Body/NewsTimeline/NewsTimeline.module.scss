@@ -1,18 +1,24 @@
 .news {
-    background-color: papayawhip;
+    background-color: #222324;
     display: grid;
     grid-template-columns: 10fr 3fr;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 5px;
     text-decoration: none;
 }
 
 .news:link {
-    color: black;
+    color: white;
 }
 
 .news:visited {
-    color: black;
+    color: white;
+}
+
+.news:hover {
+    background: #f2f6fc;
+	color: #191e2e;
+	box-shadow: inset 0 0 0 3px #191e2e;
 }
 
 .newsTitul {
