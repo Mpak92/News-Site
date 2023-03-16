@@ -1,28 +1,26 @@
 .news {
-  background-color: #222324;
+  background-color: #0A0A0A;
   display: grid;
   grid-template-columns: 10fr 3fr;
   padding: 5px;
   text-decoration: none;
+  font-size: 22px;
 }
-
 .news:link {
   color: white;
 }
-
 .news:visited {
   color: white;
 }
-
 .news:hover {
-  background: #f2f6fc;
-  color: #191e2e;
-  box-shadow: inset 0 0 0 3px #191e2e;
+  background: #F0F8FF;
+  color: #0A0A0A;
+  box-shadow: inset 0 0 0 3px #0A0A0A;
 }
 
 .newsTitul {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 32px;
 }
 
 .score {

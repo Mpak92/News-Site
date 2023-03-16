@@ -2,6 +2,10 @@
   font-family: 'BeauRivage';
   src: url('assets/fonts/BeauRivage-Regular.ttf');
 }
+@font-face {
+  font-family: 'Playfair';
+  src: url('assets/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+}
 
 body {
   margin: 0;
@@ -10,7 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f2f6fc;
+  background: #F0F8FF;
 }
 
 code {

@@ -1,0 +1,29 @@
+.news {
+    background-color: #0A0A0A;
+    display: grid;
+    grid-template-columns: 10fr 3fr;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 22px;
+
+    &:link {
+        color: white;
+    }
+    &:visited {
+        color: white;
+    }
+    &:hover {
+        background: #F0F8FF;
+        color: #0A0A0A;
+        box-shadow: inset 0 0 0 3px #0A0A0A;
+    }  
+}
+
+.newsTitul {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.score {
+    align-self: center;
+}

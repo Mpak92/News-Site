@@ -1,7 +1,8 @@
 .titul {
   margin: 0 0 10px 0;
   text-align: center;
-  background-color: #222324;
+  background-color: #0A0A0A;
+  border-bottom: 5px ridge #A19374;
 }
 .titul p {
   margin: 0;

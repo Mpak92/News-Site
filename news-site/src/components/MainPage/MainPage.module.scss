@@ -1,14 +1,16 @@
 .container {
 	display: grid;
 	justify-items: center;
+    font-family: Playfair;
 }
 
 .refreshButton {
-    border: 1px solid black;
     padding: 10px 20px 10px 20px;
-    margin-bottom: 20px;
-    font-size: large;
-    background-color: #c2e7ff;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    background-color: #0A0A0A;
+    color: white;
+    border: 5px ridge #A19374;
     cursor: pointer;
     user-select: none;
 }
@@ -17,5 +19,5 @@
     display: grid;
     width: 80%;
     margin-bottom: 30px;
-    border: 7px ridge #A19374;
+    border: 5px ridge #A19374;
 }
