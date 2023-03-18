@@ -1,4 +1,4 @@
-// import styles from './NewsInfo.module.css';
+import styles from './NewsInfo.module.css';
 import moment from 'moment';
 
 const NewsInfo = (props) => {

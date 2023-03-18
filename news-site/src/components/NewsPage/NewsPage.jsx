@@ -43,11 +43,11 @@ const NewsPage = () => {
         <div className={styles.container}>
             <NewsTitul titul={news.newsData?.title} />
             <NewsInfo url={news.newsData?.url} time={news.newsData?.time} by={news.newsData?.by} descendants={news.newsData?.descendants} />
-            {loading ? <Preloader /> : <div className={styles.commentContainer}>
+            <div className={styles.commentContainer}>
                 <div className={styles.commentsTitul}>Comments</div>
-                <div className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`)}>Update comment tree</div>
-                <div className={styles.commentBox}>{newsComment}</div>
-            </div>}
+                <div className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json`)}>Refresh</div>
+                {loading ? <Preloader /> : <div className={styles.commentBox}>{newsComment}</div>}
+            </div>
         </div>
     )
 }

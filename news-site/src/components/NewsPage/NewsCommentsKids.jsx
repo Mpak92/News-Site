@@ -12,9 +12,9 @@ const NewsCommentsKids = (props) => {
     return (
         <div>
             {data && <div className={styles.comment}>
-                <div className={styles.text}>{data.text}</div>
-                <div className={styles.by}>by {data.by}</div>
+                <div className={styles.by}>{'>'} {data.by}</div>
                 <div className={styles.time}>{moment.unix(data.time).format('DD.MM.YYYY HH:mm')}</div>
+                <div className={styles.text}>{data.text}</div>
             </div>}
             <div className={styles.kidsContainer}>
                 {data?.kids && kidsComment}
