@@ -13,7 +13,7 @@
 
 .commentContainer {
   display: grid;
-  margin-top: 10px;
+  margin-bottom: 20px;
   width: 80%;
 }
 
@@ -76,4 +76,11 @@
 .time {
   justify-self: start;
   grid-row: 1/2;
+}
+
+.absent {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  padding: 5px 0 10px 0;
 }

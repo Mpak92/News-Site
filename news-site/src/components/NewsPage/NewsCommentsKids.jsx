@@ -11,7 +11,7 @@ const NewsCommentsKids = (props) => {
 
     return (
         <div>
-            {data && <div className={styles.comment}>
+            {data?.text && <div className={styles.comment}>
                 <div className={styles.by}>{'>'} {data.by}</div>
                 <div className={styles.time}>{moment.unix(data.time).format('DD.MM.YYYY HH:mm')}</div>
                 <div className={styles.text}>{data.text}</div>

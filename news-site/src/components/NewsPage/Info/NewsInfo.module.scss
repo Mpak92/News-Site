@@ -1,0 +1,44 @@
+.container {
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.url {
+    font-size: 30px;
+    font-weight: bold;
+
+    a {
+        font-weight: 400;
+
+        &:hover {
+            text-shadow: 1px 1px 1px black;
+        }
+    }
+}
+
+.time {
+    font-size: 30px;
+    font-weight: bold;
+
+    span {
+        font-weight: 400;
+    }
+}
+
+.by {
+    font-size: 30px;
+    font-weight: bold;
+
+    span {
+        font-weight: 400;
+    }
+}
+
+.descendants {
+    font-size: 30px;
+    font-weight: bold;
+
+    span {
+        font-weight: 400;
+    }
+}

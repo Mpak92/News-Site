@@ -1,16 +1,10 @@
-.head {
-  width: 100%;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 200px;
-}
-
 .titul {
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-left: 200px;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
+  max-width: 80%;
+  text-align: center;
 }
 
 .buttonToMain {
