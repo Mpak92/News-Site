@@ -14,12 +14,6 @@ $main-color: #0A0A0A;
     font-family: Playfair;
 }
 
-.commentContainer {
-    display: grid;
-    margin-bottom: 20px;
-    width: 80%;
-}
-
 .commentsTitul {
     justify-self: center;
 }
@@ -31,6 +25,8 @@ $main-color: #0A0A0A;
     gap: 20px;
     padding: 5px;
     font-size: 24px;
+    margin-bottom: 20px;
+    width: 80%;
 }
 
 .refreshButton {

@@ -11,12 +11,6 @@
   font-family: Playfair;
 }
 
-.commentContainer {
-  display: grid;
-  margin-bottom: 20px;
-  width: 80%;
-}
-
 .commentsTitul {
   justify-self: center;
 }
@@ -28,6 +22,8 @@
   gap: 20px;
   padding: 5px;
   font-size: 24px;
+  margin-bottom: 20px;
+  width: 80%;
 }
 
 .refreshButton {
