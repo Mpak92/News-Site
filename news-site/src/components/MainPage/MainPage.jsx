@@ -22,7 +22,7 @@ const MainPageBody = () => {
         return () => {
             clearInterval(refresh);
         }
-    }, [])
+    }, [fetchNow])
 
     if (error) console.log(error);
 
