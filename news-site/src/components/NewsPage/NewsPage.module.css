@@ -35,9 +35,7 @@
   background-color: #0A0A0A;
   color: white;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   justify-self: center;
 }
 

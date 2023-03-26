@@ -1,22 +1,25 @@
 .titul {
+  display: grid;
+  grid-template-columns: 88% 1fr;
   text-align: center;
   background-color: #0A0A0A;
   border-bottom: 5px ridge #A19374;
 }
 .titul p {
-  margin: 0;
+  margin: 0 0 0 12%;
   font-family: BeauRivage;
   font-size: 120px;
   font-weight: bold;
   color: white;
 }
-
-.buttonToMain {
+.titul .buttonToMain {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
+  color: white;
+  justify-self: center;
+  align-self: center;
 }
-.buttonToMain img {
-  width: 130px;
-  height: 130px;
+.titul .buttonToMain img {
+  width: 80px;
+  height: 80px;
 }

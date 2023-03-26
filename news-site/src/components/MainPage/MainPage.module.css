@@ -12,9 +12,7 @@
   color: white;
   border: 5px ridge #A19374;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .newsContainer {

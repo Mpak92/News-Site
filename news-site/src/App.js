@@ -7,17 +7,30 @@ import Header from './components/Header/Header';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage />
-  },
-  {
-    path: "/:newsId",
-    element: <NewsPage />
+    element: <Header />,
+    children: [
+      {
+        path: "/",
+        element: <MainPage />
+      },
+      {
+        path: "/:newsId",
+        element: <NewsPage />
+      }
+    ]
   }
+  // {
+  //   path: "/",
+  //   element: <MainPage />
+  // },
+  // {
+  //   path: "/:newsId",
+  //   element: <NewsPage />
+  // }
 ]);
 
 function App() {
   return (<div>
-    <Header />
     <RouterProvider router={router} />
   </div>);
 }
