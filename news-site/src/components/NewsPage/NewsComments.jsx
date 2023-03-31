@@ -21,7 +21,7 @@ const NewsComments = (props) => {
             {data?.text && <div className={news.rootComments[props.id] ? styles.active : styles.commentRoot} onClick={() => dispatch(showNestedComments(props.id))}>
                 <div className={styles.by}>{'>'} {data.by}</div>       
                 <div className={styles.time}>{moment.unix(data.time).format('DD.MM.YYYY HH:mm')}</div>          
-                <div className={styles.text}>{data.text}</div>
+                <div className={styles.text} dangerouslySetInnerHTML={{__html: data.text}}></div>
             </div>}
             <div className={styles.kidsContainer}>
                 {news.rootComments[props.id] && kidsComment}
