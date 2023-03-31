@@ -1,5 +1,5 @@
-import useFetch from './../customHooks/useFetch';
-import styles from './NewsPage.module.css';
+import useFetch from '../../customHooks/useFetch';
+import styles from './NewsComments.module.css';
 import moment from 'moment';
 
 const NewsCommentsKids = (props) => {

@@ -1,0 +1,10 @@
+.refreshButton {
+    border: $standart-border;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 28px;
+    background-color: $background-color;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}

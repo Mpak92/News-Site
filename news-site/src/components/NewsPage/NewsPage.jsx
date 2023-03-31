@@ -4,7 +4,7 @@ import useFetch from './../customHooks/useFetch';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { addRootComments, setNewsData } from './../../redux/newsPageReducer';
-import NewsComments from './NewsComments';
+import NewsComments from './Comments/NewsComments';
 import Preloader from '../common/Preloader';
 import NewsTitul from './Titul/NewsTitul';
 import NewsInfo from './Info/NewsInfo';

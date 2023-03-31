@@ -1,23 +1,15 @@
+@import '../scss/variables';
+@import '../scss/refreshButton';
+
 .container {
 	display: grid;
 	justify-items: center;
     font-family: Playfair;
 }
 
-.refreshButton {
-    padding: 10px 20px 10px 20px;
-    margin: 10px 0 10px 0;
-    font-size: 28px;
-    background-color: #0A0A0A;
-    color: white;
-    border: 5px ridge #A19374;
-    cursor: pointer;
-    user-select: none;
-}
-
 .newsContainer {
     display: grid;
     width: 80%;
     margin-bottom: 30px;
-    border: 5px ridge #A19374;
+    border: $standart-border;
 }

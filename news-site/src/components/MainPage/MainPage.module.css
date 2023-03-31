@@ -1,20 +1,20 @@
-.container {
-  display: grid;
-  justify-items: center;
-  font-family: Playfair;
-}
-
 .refreshButton {
-  padding: 10px 20px 10px 20px;
-  margin: 10px 0 10px 0;
+  border: 5px ridge #A19374;
+  padding: 10px 20px;
+  margin: 10px 0;
   font-size: 28px;
   background-color: #0A0A0A;
   color: white;
-  border: 5px ridge #A19374;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  font-family: Playfair;
 }
 
 .newsContainer {

@@ -1,9 +1,11 @@
+@import '../scss/variables';
+
 .titul {
     display: grid;
-    grid-template-columns: 88% 1fr;
+    grid-template-columns: 1fr 12%;
     text-align: center;
-    background-color: #0A0A0A;
-    border-bottom: 5px ridge #A19374;
+    background-color: $background-color;
+    border-bottom: $standart-border;
     font-family: BeauRivage;
 
     p {

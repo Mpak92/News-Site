@@ -1,8 +1,8 @@
-import useFetch from './../customHooks/useFetch';
-import styles from './NewsPage.module.css';
+import useFetch from '../../customHooks/useFetch';
+import styles from './NewsComments.module.css';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
-import { showNestedComments } from './../../redux/newsPageReducer';
+import { showNestedComments } from '../../../redux/newsPageReducer';
 import NewsCommentsKids from './NewsCommentsKids';
 
 const NewsComments = (props) => {

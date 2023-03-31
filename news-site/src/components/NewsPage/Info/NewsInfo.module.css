@@ -1,39 +1,16 @@
+.time, .by, .descendants, .url {
+  font-size: 30px;
+  font-weight: bold;
+}
+.time span, .by span, .descendants span, .url span {
+  font-weight: 400;
+}
+
 .container {
   margin-bottom: 10px;
   max-width: 80%;
 }
 
-.url {
-  font-size: 30px;
-  font-weight: bold;
-}
-.url a {
-  font-weight: 400;
-}
 .url a:hover {
   text-shadow: 1px 1px 1px black;
-}
-
-.time {
-  font-size: 30px;
-  font-weight: bold;
-}
-.time span {
-  font-weight: 400;
-}
-
-.by {
-  font-size: 30px;
-  font-weight: bold;
-}
-.by span {
-  font-weight: 400;
-}
-
-.descendants {
-  font-size: 30px;
-  font-weight: bold;
-}
-.descendants span {
-  font-weight: 400;
 }
