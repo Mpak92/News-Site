@@ -16,10 +16,10 @@ const newsPageReducer = (state = initialState, action) => {
             };
 
         case ADD_ROOT_COMMENTS:
-            const listOfRootId = action.rootId.reduce((target, key) => {
-                target[key] = false;
-                return target;
-            }, {})
+            const listOfRootId = {};
+            for (let i = 0; i < action.rootId.length; i++) {
+                listOfRootId[action.rootId[i]] = false;
+            }
 
             return {
                 ...state,
