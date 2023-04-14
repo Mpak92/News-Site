@@ -8,7 +8,7 @@ const Header = () => {
 
     return (<>
         <div className={head.titul}><p>Latest News</p>
-           {href !== '/' && <div className={head.buttonToMain}>
+           {href !== '/' && <div className={head.buttonToMain} data-testid='link-box'>
                 <div>Back to Main</div>
                 <Link to='/'>
                     <img src={home} alt="BackToMain" />
