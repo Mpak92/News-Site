@@ -30,8 +30,8 @@ const MainPageBody = () => {
 
     return (
         <div className={styles.container}>
-            <button className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/newstories.json`)}>Refresh</button>
-            {loading ? <Preloader /> : <div className={styles.newsContainer}>
+            <button className={styles.refreshButton} onClick={() => fetchNow(`https://hacker-news.firebaseio.com/v0/newstories.json`)} data-testid='newslist-refresh'>Refresh</button>
+            {loading ? <Preloader /> : <div className={styles.newsContainer} data-testid='news-container'>
                 {newsTimeline}
             </div>}
         </div>
